@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReelPlay</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/623b79fc16.js"
+      crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <div class="nav__container">
+          <img
+            src="./assests/Black Grey Minimalist Modern Cinema Logo (1).jpg"
+            class="company__logo"
+            alt="" />
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">Browse Movies</a></li>
+            <li>
+              <a href="#" class="nav__link nav__link--primary"
+                ><span class="orange">Order</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h1>
+              Where Every Story Comes to Life, Every Moment Captivates, and
+              Endless Entertainment Awaits.
+            </h1>
+            <h2>
+              Find all the best movies & shows with
+              <span class="orange">ReelPlay</span>
+            </h2>
+            <input class="search_bar" type="text" placeholder="Search Movies...ex. War Movies">
+          </div>
+          <figure class="header__img--wrapper">
+            <img
+              src="./assests/denise-jans-WevidclYpdc-unsplash.jpg"
+              class="bkg__img"
+              alt="" />
+          </figure>
+        </div>
+      </header>
+    </section>
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <h2 class="about__title">Get your Favorite Snacks Ready</h2>
+          <div class="about__wrapper">
+            <div class="about__clarifer">
+              <div class="about__description">
+                <div class="about__img">
+                  <i class="fa-solid fa-film"></i>
+                </div>
+                <h3 class="about__subtitle">Unlimited Streaming</h3>
+                <p class="about__para">
+                  Watch thousands of movies, TV shows, and exclusive originals
+                  anytime, anywhere.
+                </p>
+              </div>
+            </div>
+            <div class="about__clarifer">
+              <div class="about__description">
+                <div class="about__img">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 class="about__subtitle">Personalized Recommendations</h3>
+                <p class="about__para">
+                  AI-driven suggestions based on your watch history and
+                  preferences.
+                </p>
+              </div>
+            </div>
+            <div class="about__clarifer">
+              <div class="about__description">
+                <div class="about__img">
+                  <i class="fa-solid fa-video"></i>
+                </div>
+                <h3 class="about__subtitle">Ultra HD & 4K Streaming</h3>
+                <p class="about__para">
+                  Crystal-clear visuals with Dolby Atmos and HDR support for the
+                  best viewing experience.
+                </p>
+              </div>
+            </div>
+            <div class="about__clarifer">
+              <div class="about__description">
+                <div class="about__img">
+                  <i class="fa-solid fa-signal"></i>
+                </div>
+                <h3 class="about__subtitle">Offline Viewing</h3>
+                <p class="about__para">
+                  Download movies and shows to watch anytime, even without an
+                  internet connection.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="catalog">
+      <div class="container">
+        <div class="row">
+          <div class="catalog__header">
+            <h2 class="catalog__title">
+              Browse Top Rated <span class="orange">Titles</span>
+            </h2>
+            <h3 class="catalog__subtitle">
+              Click through hundreds of movies & shows at your fingertips.
+            </h3>
+          </div>
+          <div class="catalog__subheader">
+            <h3 class="all__movies--title">All Movies</h3>
+            <select id="filter">
+              <option value="" disabled selected>Sort</option>
+              <option value="PRICE">Price</option>
+              <option value="RELEASE DATE">Release Date</option>
+              <option value="A TO Z">A to Z</option>
+            </select>
+          </div>
+          <div id="movies" class="movies">
+            <!-- <i class="fa-solid fa-spinner movies__loading--spinner"></i> -->
+          </div>
+          <!-- <div class="movie__groups">
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" class="movie__poster" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img src="./assests/Den of theives.jpeg" alt="">
+              </figure>
+              <div class="movie__title">Den of Thieves</div>
+              <div class="movie__price">$21.99</div>
+              <div class="release__date">2018</div>
+              <div class="category">Action</div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <footer>
+      <hr />
+      <div class="container">
+        <div class="row footer__row">
+          <figure class="footer__logo">
+            <img
+              src="./assests/Black Grey Minimalist Modern Cinema Logo (1).jpg"
+              class="footer__img"
+              alt="" />
+          </figure>
+          <div class="footer__links">
+            <a href="" class="footer__link">Home</a>
+            <a href="" class="footer__link">Browse Movies</a>
+            <a href="" class="footer__link">Order</a>
+            <a href="" class="footer__link">Sort By</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2025 ReelPlay</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
