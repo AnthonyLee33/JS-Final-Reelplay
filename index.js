@@ -1,7 +1,16 @@
-async function call() {
-  const response = await fetch("https://www.omdbapi.com/?s=new&apikey=a9a82510");
+var all_movies = new Array();
+
+async function call(searchTerm) {
+  const response = await fetch("https://www.omdbapi.com/?s="+searchTerm+"&apikey=a9a82510");
   var movies = await response.json();
-  var html = movies.Search.map((movie) => {
+  all_movies = movies.Search;
+  sortBy(document.getElementById("filter"));
+}
+
+call("war");
+
+function display() {
+  var html = all_movies.map((movie) => {
     return (
       `<div class="movie">
       <figure class="movie__poster">
@@ -16,17 +25,27 @@ async function call() {
       </div>`
     );
   });
-  
-  document.getElementById("movies").innerHTML = html;
+  document.getElementById("movies").innerHTML = html.join("")
 }
 
-call();
+function sortBy (select) {
+var option = select.options[select.selectedIndex];
+if (option.value == "Year") {
+  all_movies.sort((a,b) => a.Year.localeCompare(b.Year));
+} else if (option.value == "Title") {
+  all_movies.sort((a,b) => a.Title.localeCompare(b.Title));
+}
+display();  
+}
 
-function search () {
-  var movie__title;
-  input = document.getElementById("movie_title");
-  for (i =0; i < 100; i++) {
-    
+var timeoutID = undefined;
+function search (inputobject) {
+  if (timeoutID) {
+    clearTimeout(timeoutID);
+    timeoutID=undefined;
   }
-
+  timeoutID=setTimeout(() => {
+    call(inputobject.value);
+  },500);
+  
 }

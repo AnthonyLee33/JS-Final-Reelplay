@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReelPlay</title>
+    <title> Working - ReelPlay</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/623b79fc16.js"
@@ -19,10 +19,10 @@
             class="company__logo"
             alt="" />
           <ul class="nav__links">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">Browse Movies</a></li>
+            <li><a href="search" class="nav__link">Home</a></li>
+            <li><a href="#search" class="nav__link">Browse Movies</a></li>
             <li>
-              <a href="#" class="nav__link nav__link--primary"
+              <a href="#search" class="nav__link nav__link--primary"
                 ><span class="orange">Order</span></a
               >
             </li>
@@ -41,7 +41,7 @@
               Find all the best movies & shows with
               <span class="orange">ReelPlay</span>
             </h2>
-            <input id="search" class="search_bar" type="text" placeholder="Search Movies...ex. War Movies">
+            <input id="search" class="search_bar" onkeyup="search(this)" type="text" placeholder="Search Movies...ex. War Movies">
           </div>
           <figure class="header__img--wrapper">
             <img
@@ -122,11 +122,9 @@
           </div>
           <div class="catalog__subheader">
             <h3 class="all__movies--title">All Movies</h3>
-            <select id="filter">
-              <option value="" disabled selected>Sort</option>
-              <option value="PRICE">Price</option>
-              <option value="RELEASE DATE">Release Date</option>
-              <option value="A TO Z">A to Z</option>
+            <select id="filter" onchange="sortBy(this)">
+              <option value="Year">Year of Relesae</option>
+              <option value="Title">Title</option>
             </select>
           </div>
           <div id="movies" class="movies">
@@ -229,10 +227,10 @@
               alt="" />
           </figure>
           <div class="footer__links">
-            <a href="" class="footer__link">Home</a>
-            <a href="" class="footer__link">Browse Movies</a>
-            <a href="" class="footer__link">Order</a>
-            <a href="" class="footer__link">Sort By</a>
+            <a href="#" class="footer__link">Home</a>
+            <a href="#" class="footer__link">Browse Movies</a>
+            <a href="#" class="footer__link">Order</a>
+            <a href="#" class="footer__link">Sort By</a>
           </div>
           <div class="footer__copyright">Copyright &copy; 2025 ReelPlay</div>
         </div>
